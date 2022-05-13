@@ -1,0 +1,12 @@
+C:\Users\kolom\OneDrive\Документы\programming\C#\ActionsWithFigures\ActionsWithFigures\bin\Debug\net5.0\ActionsWithFigures.deps.json
+C:\Users\kolom\OneDrive\Документы\programming\C#\ActionsWithFigures\ActionsWithFigures\bin\Debug\net5.0\ActionsWithFigures.dll
+C:\Users\kolom\OneDrive\Документы\programming\C#\ActionsWithFigures\ActionsWithFigures\bin\Debug\net5.0\ref\ActionsWithFigures.dll
+C:\Users\kolom\OneDrive\Документы\programming\C#\ActionsWithFigures\ActionsWithFigures\bin\Debug\net5.0\ActionsWithFigures.pdb
+C:\Users\kolom\OneDrive\Документы\programming\C#\ActionsWithFigures\ActionsWithFigures\obj\Debug\net5.0\ActionsWithFigures.csproj.AssemblyReference.cache
+C:\Users\kolom\OneDrive\Документы\programming\C#\ActionsWithFigures\ActionsWithFigures\obj\Debug\net5.0\ActionsWithFigures.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kolom\OneDrive\Документы\programming\C#\ActionsWithFigures\ActionsWithFigures\obj\Debug\net5.0\ActionsWithFigures.AssemblyInfoInputs.cache
+C:\Users\kolom\OneDrive\Документы\programming\C#\ActionsWithFigures\ActionsWithFigures\obj\Debug\net5.0\ActionsWithFigures.AssemblyInfo.cs
+C:\Users\kolom\OneDrive\Документы\programming\C#\ActionsWithFigures\ActionsWithFigures\obj\Debug\net5.0\ActionsWithFigures.csproj.CoreCompileInputs.cache
+C:\Users\kolom\OneDrive\Документы\programming\C#\ActionsWithFigures\ActionsWithFigures\obj\Debug\net5.0\ActionsWithFigures.dll
+C:\Users\kolom\OneDrive\Документы\programming\C#\ActionsWithFigures\ActionsWithFigures\obj\Debug\net5.0\ref\ActionsWithFigures.dll
+C:\Users\kolom\OneDrive\Документы\programming\C#\ActionsWithFigures\ActionsWithFigures\obj\Debug\net5.0\ActionsWithFigures.pdb

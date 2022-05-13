@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "FiguresMain/1.0.0": {
+        "dependencies": {
+          "ActionsWithFigures": "1.0.0"
+        },
+        "runtime": {
+          "FiguresMain.dll": {}
+        }
+      },
+      "ActionsWithFigures/1.0.0": {
+        "runtime": {
+          "ActionsWithFigures.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FiguresMain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ActionsWithFigures/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
