@@ -17,8 +17,8 @@ namespace FileWiThreads
             int num;
             do
             {
-                Console.WriteLine("Введите число потоков, которые будут построчно обрабатывать файл (от 1 до 20)");
-            } while (!int.TryParse(Console.ReadLine(), out num) || num < 0 || num > 20);
+                Console.WriteLine("Введите число потоков, которые будут построчно обрабатывать файл (от 4 до 8)");
+            } while (!int.TryParse(Console.ReadLine(), out num) || num < 4 || num > 8);
             return (path, num);
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -16,6 +17,9 @@ namespace FileWiThreads
 
         // Количество потоков, которые будут обрабатывать файл.
         int countThreads;
+
+        // Список строк.
+        List<string> text = new List<string>();
 
         // Свойство для поля path.
         public string Path
@@ -50,14 +54,26 @@ namespace FileWiThreads
             CountThreads = count;
         }
 
+        /// <summary>
+        /// Заполение словаря триплетами из списка строк.
+        /// </summary>
+        /// <param name="o"> список строк. </param>
+        void GetTripletsFromList(object o)
+        {
+            var arr = (List<string>)o;
+            foreach (string line in arr)
+            {
+                GetTripletFromLine(line);
+            }
+        }
+
 
         /// <summary>
-        /// Заполнение словаря триплитами из данной строки.
+        /// Заполнение словаря триплетами из данной строки.
         /// </summary>
         /// <param name="l"> Строка, из которой считываются триплеты. </param>
-        void GetTripletFromLine(object l)
+        void GetTripletFromLine(string line)
         {
-            string line = (string)l;
             string triplet = "";
             char a, b, c;
             for (int i = 0; i < line.Length - 2; i++)
@@ -85,7 +101,7 @@ namespace FileWiThreads
 
 
         /// <summary>
-        /// Запуск потоков для обработки файла.
+        /// Чтение файла.
         /// </summary>
         public void GetTriplets()
         {
@@ -97,20 +113,8 @@ namespace FileWiThreads
                     line = sr.ReadLine();
                     while (line != null)
                     {
-                        Thread[] threads = new Thread[countThreads];
-                        for (int i = 0; line != null && i < countThreads; i++)
-                        {
-                            threads[i] = new Thread(new ParameterizedThreadStart(GetTripletFromLine));
-                            threads[i].Start(line);
-                            line = sr.ReadLine();
-                        }
-                        for (int i = 0; i < countThreads; i++)
-                        {
-                            if (threads[i] != null)
-                            {
-                                threads[i].Join();
-                            }
-                        }                     
+                        text.Add(line);
+                        line = sr.ReadLine();
                     }
                 }
             }
@@ -119,6 +123,38 @@ namespace FileWiThreads
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Невозможно прочесть файл!");
                 Console.ResetColor();
+            }
+            RunProcess();
+        }
+
+
+        /// <summary>
+        /// Запуск потоков.
+        /// </summary>
+        public void RunProcess()
+        {
+            int countLines = text.Count / countThreads;
+            int start = 0;
+            Thread[] threads = new Thread[countThreads];
+            for (int i = 0; i < countThreads; i++)
+            {
+                threads[i] = new Thread(new ParameterizedThreadStart(GetTripletsFromList));
+                if (i == countThreads - 1)
+                {
+                    threads[i].Start(text.GetRange(start, text.Count - start));
+                }
+                else
+                {
+                    threads[i].Start(text.GetRange(start, countLines));
+                }
+                start += countLines;
+            }
+            for (int i = 0; i < countThreads; i++)
+            {
+                if (threads[i] != null)
+                {
+                    threads[i].Join();
+                }
             }
         }
 

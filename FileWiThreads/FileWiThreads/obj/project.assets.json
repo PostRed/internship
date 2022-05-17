@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kolom\\OneDrive\\Документы\\programming\\C#\\FileWiThreads\\FileWiThreads\\FileWiThreads.csproj",
+      "projectUniqueName": "C:\\Users\\kolom\\OneDrive\\Документы\\programming\\internshipMindbox\\FileWiThreads\\FileWiThreads\\FileWiThreads.csproj",
       "projectName": "FileWiThreads",
-      "projectPath": "C:\\Users\\kolom\\OneDrive\\Документы\\programming\\C#\\FileWiThreads\\FileWiThreads\\FileWiThreads.csproj",
+      "projectPath": "C:\\Users\\kolom\\OneDrive\\Документы\\programming\\internshipMindbox\\FileWiThreads\\FileWiThreads\\FileWiThreads.csproj",
       "packagesPath": "C:\\Users\\kolom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kolom\\OneDrive\\Документы\\programming\\C#\\FileWiThreads\\FileWiThreads\\obj\\",
+      "outputPath": "C:\\Users\\kolom\\OneDrive\\Документы\\programming\\internshipMindbox\\FileWiThreads\\FileWiThreads\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
